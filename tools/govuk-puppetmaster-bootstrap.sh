@@ -78,7 +78,7 @@ chmod 600 ${GPG_KEYSTORE}/${GPG_KEYNAME}
 set -x
 
 # Clone Puppet repo
-${GIT_BINARY} clone ${GOVUK_GIT_URL}/${GOVUK_PUPPET_REPO}
+${GIT_BINARY} clone --branch puppetdb-puppetserver-refactor-and-ordering-fixes ${GOVUK_GIT_URL}/${GOVUK_PUPPET_REPO}
 
 # Clone secrets repo
 ${GIT_BINARY} clone ${GOVUK_GIT_URL}/${GOVUK_SECRETS_REPO}
