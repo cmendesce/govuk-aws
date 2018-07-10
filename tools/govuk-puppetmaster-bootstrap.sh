@@ -59,7 +59,7 @@ puppet_release_dir="/usr/share/puppet/$environment/releases/$(date +%Y%m%d%H%M%S
 puppet_current="/usr/share/puppet/$environment/current"
 
 mkdir -p "$puppet_release_dir"
-git clone git@github.com:alphagov/govuk-puppet.git "$puppet_release_dir"
+git clone --branch vagrant-decouple-govuk-provisioning git@github.com:alphagov/govuk-puppet.git "$puppet_release_dir"
 ln -s "$puppet_release_dir" "$puppet_current"
 
 # Clone secrets repo and copy secrets into 
